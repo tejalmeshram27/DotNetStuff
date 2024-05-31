@@ -1,0 +1,33 @@
+﻿@page
+@model RazorDemo.Pages.AboutUsModel
+@{
+	string about = "All about adventure products";
+}
+<h1>
+	About Us
+</h1>
+<h3>
+	<p class="display-3" > @about </p>
+</h3>
+
+<h3>@Model.about</h3>
+
+<div class="card" >
+	<div class="card-header" >
+		Razor Demo
+	</div>
+	<div class="card-body">
+		<p> Hello! today is @DateTime.Today.Date.ToString("dd/MM/yyyy") </p>
+		@{
+			var temp = 28;
+		}
+		<p> The current temp is @temp degrees </p>
+		
+		@if (temp >  38)
+		{
+			<p> Stay at home </p>
+		}
+		@@instagram
+	</div>
+
+</div>

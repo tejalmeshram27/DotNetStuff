@@ -1,0 +1,101 @@
+﻿@page
+@model RazorLab.Pages.SportcshtmlModel
+@{
+}
+
+<p> @Model.sport </p>
+
+<br>
+<br>
+
+@for(int i = 0; i < Model.cardDesc.Count; i++)
+{
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.cardTitle[i]</h5>
+            <p class="card-text"> @Model.cardDesc[i] </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <br />
+}
+
+@*
+@foreach(var item in Model.cardTitle)
+{
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@item</h5>
+            <p class="card-text"> Delve into the extraordinary stories of athletes who redefined the game, shattered records, and left an indelible mark on sports history.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <br>
+}
+
+@foreach(var item in Model.cardDesc)
+{
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Lorem</h5>
+            <p class="card-text"> @item </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <br>
+}
+
+*@
+
+@*@<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+        <h5 class="card-title">Game Changers: Unveiling the Legends Behind the Records</h5>
+        <p class="card-text"> Delve into the extraordinary stories of athletes who redefined the game, shattered records, and left an indelible mark on sports history.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+        <h5 class="card-title">Tactics Unleashed: Decoding Strategies That Define Victory</h5>
+        <p class="card-text"> From tactical brilliance to strategic finesse, journey through the game plans and maneuvers that turn matches into thrilling battles of wits and skill.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Rising Stars: Emerging Talents on the Path to Greatness</h5>
+        <p class="card-text"> From tactical brilliance to strategic finesse, journey through the game plans and maneuvers that turn matches into thrilling battles of wits and skill.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Beyond the Game: Inspiring Tales of Sportsmanship and Resilience</h5>
+        <p class="card-text">Explore the heartwarming stories of athletes who exemplify sportsmanship, resilience, and the incredible human spirit that transcends the scoreboards.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+
+<br>
+
+*@
+

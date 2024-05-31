@@ -1,0 +1,61 @@
+﻿@*@model IEnumerable<MVCSportsRepo.Models.Sports> *@
+
+@model SportsListViewModel
+
+<form asp-controller="Sports" asp-action="Index" method="get">
+	<label for="categoryDropdown">Select a Type: </label>
+	<select id="categoryDropdown" name="Id">
+		@*<option value="0">All Categories</option>*@
+		<option value="1">High Popularity</option>
+		<option value="2">Medium Popularity</option>
+		<option value="3">Low Popularity</option>
+	</select>
+	<button type="submit">Search</button>
+</form>
+
+<br />
+
+<p> Category Id => 1 : High Popularity </p>
+<p> Category Id => 2 : Medium Popularity </p>
+<p> Category Id => 3 : Low Popularity </p>
+
+
+<div class="row" style="margin:40px">
+
+	
+	<form asp-controller="Sports" asp-action="Index" method="get">
+		<input type="text"  placeholder="Search..." name="query">
+		<input type="submit" value="Search">
+	</form>
+	
+
+	@foreach (var item in Model.Sports)
+	{
+		<div class="col-sm-3">
+			<div class="card-deck">
+				<div class="card-shadow">
+					<div class="card-body">
+
+						<h4 class="card-title">
+							@item.name
+						</h4>
+
+						<p class="card-text">
+						
+							<p>Total Players Required: @item.playersReq</p>
+
+							<p>Indoor/Outdoor: @item.sportsType</p>
+
+							<p>Category ID: @item.categoryId</p>
+
+							<p>Category: @item.catergory.categoryName </p>
+							
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+
+</div>

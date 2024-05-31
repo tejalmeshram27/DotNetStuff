@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MVCMockDemo/1.0.0": {
+        "runtime": {
+          "MVCMockDemo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MVCMockDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

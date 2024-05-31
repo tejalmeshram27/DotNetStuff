@@ -1,0 +1,52 @@
+﻿@model MovieListViewModel
+
+<div class="row" style="margin:40px">
+
+	@*@Model.CurrentCategory*@
+
+	@foreach (var item in Model.Movie)
+	{
+
+		<partial name="_MovieDeck" model="item"/>
+
+		<div class="col-sm-3">
+			<div class="card-deck">
+				<div class="card-shadow">
+					<div class="card-body">
+						<h4 class="card-title">
+							@item.Name
+
+						</h4>
+						<p class="card-text">
+							@item.MovieStar
+							@item.Rating
+							@item.Category.CategoryName
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@*
+		<div class="col-sm-3">
+			<div class="card-deck">
+				<div class="card-shadow">
+					<div class="card-body" >
+						<h4 class="card-title">
+							@item.Name
+						</h4>
+						<p class="card-text">
+							@item.MovieStar
+							@item.Rating
+							@item.CategoryId
+							
+						</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	*@
+	}
+
+</div>
